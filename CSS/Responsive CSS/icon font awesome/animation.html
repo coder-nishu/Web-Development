@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @keyframes Sliding {
+        from{
+            background-color: greenyellow;
+            left: 0;
+            top: 0px;
+        }
+
+        to{
+            background-color: magenta;
+            left: 100px;
+        }
+        
+        0%{
+            background-color: greenyellow;
+            left: 0;
+            top: 0px;
+        }
+        25%{
+            background-color: magenta;
+            left: 120px;
+            top: 200px;
+            transform: scale(0.5);
+            
+        }
+        50%{
+            background-color: greenyellow;
+            left: 250px;
+            top: 0px;
+            transform: scale(1);
+        }
+
+        75%{
+
+            background-color: magenta;
+            left: 375px;
+            top: 200px;
+            transform: scale(0.5);
+        }
+        100%{
+            background-color: greenyellow;
+            left: 500px;
+            top: 0px
+            
+        }
+        
+    }
+    .stage{
+        width: 600px;
+        height: 300px;
+        border: 2px solid lightcoral;
+        background-color: aqua;
+    }
+    .ball{
+        width: 100px;
+        height: 100px;
+        background: greenyellow;
+        border-radius: 50%;
+        position: relative;
+        animation: Sliding 3s ease-in-out 2s infinite alternate;
+        animation-play-state: running;
+    }
+</style>
+<body>
+    <h1>lets explore animation.</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
